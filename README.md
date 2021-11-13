@@ -2,6 +2,9 @@
 
 Rails app renders random greetings. The app uses react to render the UI.
 
+### Link to front end repo
+https://github.com/igorkol91/hello-react-front-end/pull/1
+
 ### Built with
 
 Ruby on Rails
