@@ -7,10 +7,22 @@
 
 # Rails.application.config.middleware.insert_before 0, Rack::Cors do
 #   allow do
-#     origins 'example.com'
-#
+#     origins 'localhost:3000/v1/greetings'
+
 #     resource '*',
 #       headers: :any,
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
-# end
+
+# Rails.application.config.middleware.insert_before 0, Rack::Cors do
+#     allow do
+#       origins 'http://localhost:3001/'
+#       resource '*', headers: :any
+#     end
+#   end
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+      resource '*', headers: :any, methods: [:get, :post, :patch, :put]
+    end
+  end
